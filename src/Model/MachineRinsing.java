@@ -10,7 +10,7 @@ public class MachineRinsing extends MachineState {
 	
 	public MachineRinsing(){
 		System.out.println(status());
-		machine.m.slow();
+		machine.facade.entryRinsing();
 	}
 	
 	public MachineState timeOver(){

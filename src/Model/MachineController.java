@@ -2,18 +2,12 @@ package Model;
 
 public class MachineController {
 
-	public Bomb b;
-	public Valve v;
-	public Motor m;
-	public int ciclo;
+	public MachineFacade facade;
 	private MachineState state;
 	
 	public MachineController(){
-		b=new Bomb(this);
-		v=new Valve(this);
-		m=new Motor(this);
+		facade = new MachineFacade(this);
 		state=MachineState.getInitialState(this);
-		ciclo=0;
 	}
 	public void start(){
 		

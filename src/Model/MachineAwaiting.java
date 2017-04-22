@@ -12,7 +12,7 @@ public class MachineAwaiting extends MachineState {
 		System.out.println(status());
 	}
 	public MachineState start(){
-		machine.ciclo=1;
+		machine.facade.exitAwaiting();
 		return new MachineFillingTank();
 	}
 

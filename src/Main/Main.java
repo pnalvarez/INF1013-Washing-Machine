@@ -15,8 +15,8 @@ public class Main {
 	
 	public static void addAllObserversToObservable(WashingFrame frame,Observer o){
 		
-		frame.machine.b.addObserver( o);
-		frame.machine.v.addObserver(o);
-		frame.machine.m.addObserver(o);
+		frame.machine.facade.b.addObserver( o);
+		frame.machine.facade.v.addObserver(o);
+		frame.machine.facade.m.addObserver(o);
 	}
 }

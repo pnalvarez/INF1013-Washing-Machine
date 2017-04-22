@@ -28,9 +28,9 @@ public class WashingPanel extends JPanel implements Observer,ActionListener{
 		
 		setBounds(0,0,1000,1000);
 		setBackground(Color.WHITE);
-		images.add(new ImageIcon("img01.jpg"));
-		images.add(new ImageIcon("img02.jpg"));
-		images.add(new ImageIcon("img03.jpg"));
+		images.add(new ImageIcon("src/images/img01.jpg"));
+		images.add(new ImageIcon("src/images/img02.jpg"));
+		images.add(new ImageIcon("src/images/img03.jpg"));
 		machine=m;
 		setLayout(null);
 		start=new JButton("Start");
@@ -38,7 +38,7 @@ public class WashingPanel extends JPanel implements Observer,ActionListener{
 		start.addActionListener(this);
 		start.setVisible(true);
 		add(start);
-		machineImage = new JLabel(new ImageIcon("img01.jpg"));
+		machineImage = new JLabel(images.get(0));
 		machineImage.setBounds(90, 100, 500, 500);
 		add(machineImage);
 		
@@ -59,7 +59,7 @@ public class WashingPanel extends JPanel implements Observer,ActionListener{
 		
 		if(o instanceof Valve || o instanceof Bomb ){
 			currentLevel = (Integer) arg;
-			this.repaint();
+			repaint();
 		}
 		else{
 			if(arg!=null)
@@ -68,7 +68,7 @@ public class WashingPanel extends JPanel implements Observer,ActionListener{
 			else
 				machineImage.setIcon(images.get(0));
 				
-			this.repaint();
+			repaint();
 		}
 		
 	}

@@ -10,7 +10,7 @@ public class MachineFillingTank extends MachineState {
 	
 	public MachineFillingTank(){
 		System.out.println(status());
-		machine.v.open();
+		machine.facade.entryFillingTank();
 	}
 	
 	public MachineState full(){

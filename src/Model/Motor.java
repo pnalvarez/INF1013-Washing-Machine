@@ -39,7 +39,7 @@ public class Motor extends Observable implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		
 		seconds++;
-		System.out.printf("Motor %d seconds\n",seconds);
+		System.out.printf("Motor %f seconds\n",(double)seconds/10);
 		this.setChanged();
 		
 		if(seconds<MaxTime){

@@ -10,7 +10,7 @@ public class MachineEmptyingTank extends MachineState {
 	
 	public MachineEmptyingTank(){
 		System.out.println(status());
-		machine.b.start();
+		machine.facade.entryEmptyingTank();
 	}
 
 	public MachineState timeOver(){
