@@ -12,7 +12,7 @@ public class MachineFacade {
 	private Bomb b;
 	private Motor m;
 	private Valve v;
-	public int ciclo;
+	private int cicle;
 	
 	public MachineController machine;
 	
@@ -21,11 +21,11 @@ public class MachineFacade {
 		b=new Bomb(machine);
 		m=new Motor(machine);
 		v=new Valve(machine);
-		ciclo=0;
+		cicle=0;
 	}
 	
 	public void exitAwaiting(){
-		ciclo=1;
+		cicle=1;
 	}
 	
 	public void entryFillingTank(){
@@ -41,7 +41,10 @@ public class MachineFacade {
 		m.fast();
 	}
 	public void exitSpinningToFillTank(){
-		ciclo++;
+		cicle++;
+	}
+	public int getCicle(){
+		return cicle;
 	}
 	public void addObservers(Observer o){
 		b.addObserver(o);

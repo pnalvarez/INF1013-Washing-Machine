@@ -9,13 +9,13 @@ public class MachineSpinning extends MachineState {
 	}
 
 	public MachineSpinning(){
-		System.out.printf("%s cicle %d\n",status(),machine.facade.ciclo);
+		System.out.printf("%s cicle %d\n",status(),machine.facade.getCicle());
 		machine.facade.entrySpinning();
 	}
 	
 	public MachineState timeOver(){
 		
-		if(machine.facade.ciclo==1){
+		if(machine.facade.getCicle()==1){
 			machine.facade.exitSpinningToFillTank();
 			return new MachineFillingTank();
 		}
