@@ -15,7 +15,7 @@ public class Bomb extends Observable implements ActionListener{
 	public Bomb(MachineController m){
 		machine=m;
 		level=10;
-		t = new Timer(1000,this);
+		t = new Timer(200,this);
 	}
 	
 	public void start(){

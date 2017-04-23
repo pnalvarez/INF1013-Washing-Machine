@@ -47,12 +47,19 @@ public class WashingPanel extends JPanel implements Observer,ActionListener{
 	public void paintComponent(Graphics g){
 		
 		super.paintComponent(g);
-		
+				
 		machineImage.setIcon(images.get(currentImage));
-		g.setColor(Color.CYAN);
+		g.setColor(Color.cyan);
 		
 		for(int i=0;i<currentLevel;i++)
 			g.fillRect(790, 600-50*i, 70, 50);
+		
+		g.setColor(Color.black);
+		
+		for(int i=0;i<10;i++)
+			g.drawRect(790, 600-50*i, 70, 50);
+		
+			g.drawString("Tank", 800, 680);
 	}
 	@Override
 	public void update(Observable o, Object arg) {

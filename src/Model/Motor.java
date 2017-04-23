@@ -12,22 +12,25 @@ public class Motor extends Observable implements ActionListener{
 	private Timer t;
 	private int MaxTime;
 	private int animation=0;
-	private int seconds = 0;
+	private int time_count = 0;
+	private String SpeedMode;
 	
 	public Motor(MachineController m){
 		machine=m;
 	}
 	
 	public void slow(){
-		t=new Timer(100,this);
-		seconds=0;
-		MaxTime=100;
+		t=new Timer(100,this); 
+		SpeedMode = "Slow";
+		time_count=0;
+		MaxTime=100; //0.1 seconds x 100 = 10 seconds
 		t.start();
 	}
 	public void fast(){
 		t=new Timer(50,this);
-		seconds=0;
-		MaxTime=200;
+		SpeedMode = "Fast";
+		time_count=0;
+		MaxTime=60;//0.05 seconds x 60 =  3 seconds
 		t.start();
 	}
 	
@@ -35,14 +38,27 @@ public class Motor extends Observable implements ActionListener{
 		t.stop();
 		machine.timeOver();
 	}
+	private void showTime(String speedMode, int time){
+		
+		if(speedMode=="Slow"){
+			if(time%10==0)
+			System.out.printf("Motor %d seconds\n",time_count/10);
+		}
+		else{
+			if(time%20==0)
+			System.out.printf("Motor %d seconds\n",time_count/20);
+		}
+	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
-		seconds++;
-		System.out.printf("Motor %f seconds\n",(double)seconds/10);
+		time_count++;
+		
+		showTime(SpeedMode,time_count);
+		
 		this.setChanged();
 		
-		if(seconds<MaxTime){
+		if(time_count<MaxTime){
 			
 			
 			if(animation<2)
