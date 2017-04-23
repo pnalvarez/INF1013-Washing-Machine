@@ -1,4 +1,9 @@
-package Model;
+package Facade;
+
+import Model.Bomb;
+import Model.MachineController;
+import Model.Motor;
+import Model.Valve;
 
 public class MachineFacade {
 

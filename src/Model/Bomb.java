@@ -19,6 +19,7 @@ public class Bomb extends Observable implements ActionListener{
 	}
 	
 	public void start(){
+		
 		level=10;
 		t.start();
 	}

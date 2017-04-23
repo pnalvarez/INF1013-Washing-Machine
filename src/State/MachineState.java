@@ -1,4 +1,6 @@
-package Model;
+package State;
+
+import Model.MachineController;
 
 public abstract class MachineState {
 

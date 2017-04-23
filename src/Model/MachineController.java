@@ -1,5 +1,8 @@
 package Model;
 
+import Facade.MachineFacade;
+import State.MachineState;
+
 public class MachineController {
 
 	public MachineFacade facade;

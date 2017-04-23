@@ -1,4 +1,4 @@
-package Model;
+package State;
 
 public class MachineEmptyingTank extends MachineState {
 
