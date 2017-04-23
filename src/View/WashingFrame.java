@@ -18,6 +18,8 @@ public class WashingFrame extends JFrame{
 		machine = new MachineController();
 		panel=new WashingPanel(machine);
 		getContentPane().add(panel);
+		machine.facade.addObservers(panel);
+		setVisible(true);
 	}
 	
 }

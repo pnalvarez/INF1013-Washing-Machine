@@ -1,5 +1,7 @@
 package Facade;
 
+import java.util.Observer;
+
 import Model.Bomb;
 import Model.MachineController;
 import Model.Motor;
@@ -7,9 +9,9 @@ import Model.Valve;
 
 public class MachineFacade {
 
-	public Bomb b;
-	public Motor m;
-	public Valve v;
+	private Bomb b;
+	private Motor m;
+	private Valve v;
 	public int ciclo;
 	
 	public MachineController machine;
@@ -40,5 +42,10 @@ public class MachineFacade {
 	}
 	public void exitSpinningToFillTank(){
 		ciclo++;
+	}
+	public void addObservers(Observer o){
+		b.addObserver(o);
+		m.addObserver(o);
+		v.addObserver(o);
 	}
 }

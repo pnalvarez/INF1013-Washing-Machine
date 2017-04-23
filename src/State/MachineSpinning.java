@@ -9,7 +9,7 @@ public class MachineSpinning extends MachineState {
 	}
 
 	public MachineSpinning(){
-		System.out.printf("%s %d\n",status(),machine.facade.ciclo);
+		System.out.printf("%s cicle %d\n",status(),machine.facade.ciclo);
 		machine.facade.entrySpinning();
 	}
 	
