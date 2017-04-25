@@ -28,7 +28,7 @@ public class Valve extends Observable implements ActionListener{
 		machine.full();
 	}
 	
-	private boolean isFull(){
+	private boolean TankisFull(){
 		return level==10;
 	}
 
@@ -39,7 +39,7 @@ public class Valve extends Observable implements ActionListener{
 		setChanged();
 		notifyObservers(level);
 		
-		if(isFull()){
+		if(TankisFull()){
 			t.stop();
 			close();
 		}

@@ -28,7 +28,7 @@ public class Bomb extends Observable implements ActionListener{
 		t.stop();
 		machine.timeOver();
 	}
-	private boolean isEmpty(){
+	private boolean TankisEmpty(){
 		return level==0;
 	}
 	@Override
@@ -39,7 +39,7 @@ public class Bomb extends Observable implements ActionListener{
 		setChanged();
 		notifyObservers(level);
 		
-		if(isEmpty())
+		if(TankisEmpty())
 			stop();
 		
 		

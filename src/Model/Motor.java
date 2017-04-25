@@ -56,8 +56,6 @@ public class Motor extends Observable implements ActionListener{
 		
 		showTime(SpeedMode,time_count);
 		
-		this.setChanged();
-		
 		if(time_count<MaxTime){
 			
 			
@@ -66,11 +64,12 @@ public class Motor extends Observable implements ActionListener{
 			else
 				animation=0;
 			
-	
-			this.notifyObservers(new Integer(animation));
+			this.setChanged();
+			this.notifyObservers(animation);
 		}
 		else{
-			
+			System.out.println("changed");
+		    this.setChanged();
 			this.notifyObservers(null);
 			stop();
 		}

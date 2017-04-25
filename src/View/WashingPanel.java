@@ -73,8 +73,8 @@ public class WashingPanel extends JPanel implements Observer,ActionListener{
 				currentImage = (Integer) arg;
 				
 			else
-				machineImage.setIcon(images.get(0));
-				
+				currentImage = 0;
+			
 			repaint();
 		}
 		
