@@ -6,8 +6,9 @@ import Model.MachineController;
 
 public class WashingFrame extends JFrame{
 
-	public WashingPanel panel;
-	public MachineController machine;
+	private static final long serialVersionUID = 1L;
+	private WashingPanel panel;
+	private MachineController machine;
 	
 	public WashingFrame(){
 		

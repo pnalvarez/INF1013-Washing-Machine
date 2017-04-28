@@ -1,10 +1,9 @@
 package State;
 
-public class MachineEmptyingTank extends MachineState {
+    class MachineEmptyingTank extends MachineState {
 
 	@Override
-	public String status() {
-		// TODO Auto-generated method stub
+	 String status() {
 		return "Emptying Tank";
 	}
 	

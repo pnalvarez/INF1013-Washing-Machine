@@ -15,8 +15,9 @@ import Model.MachineController;
 import Model.Bomb;
 import Model.Valve;
 
-public class WashingPanel extends JPanel implements Observer,ActionListener{
+ class WashingPanel extends JPanel implements Observer,ActionListener{
 
+	private static final long serialVersionUID = 1L;
 	private JButton start;
 	private MachineController machine;
 	private int currentLevel=0;
@@ -24,7 +25,7 @@ public class WashingPanel extends JPanel implements Observer,ActionListener{
 	private List<ImageIcon> images = new ArrayList<ImageIcon>();
 	private JLabel machineImage;
 	
-	public WashingPanel(MachineController m){
+	 WashingPanel(MachineController m){
 		
 		setBounds(0,0,1000,1000);
 		setBackground(Color.WHITE);

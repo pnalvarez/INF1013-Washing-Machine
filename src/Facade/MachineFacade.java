@@ -14,10 +14,7 @@ public class MachineFacade {
 	private Valve v;
 	private int cicle;
 	
-	public MachineController machine;
-	
 	public MachineFacade(MachineController machine){
-		this.machine=machine;
 		b=new Bomb(machine);
 		m=new Motor(machine);
 		v=new Valve(machine);

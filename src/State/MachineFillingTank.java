@@ -1,10 +1,9 @@
 package State;
 
-public class MachineFillingTank extends MachineState {
+     class MachineFillingTank extends MachineState {
 
 	@Override
-	public String status() {
-
+	 String status() {
 		return "Filling Tank";
 	}
 	

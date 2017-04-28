@@ -1,10 +1,9 @@
 package State;
 
-public class MachineAwaiting extends MachineState {
+  class MachineAwaiting extends MachineState {
 
 	@Override
-	public String status() {
-		// TODO Auto-generated method stub
+	 String status() {
 		return "Awaiting";
 	}
 	
