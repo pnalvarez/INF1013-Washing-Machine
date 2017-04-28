@@ -64,13 +64,13 @@ public class Motor extends Observable implements ActionListener{
 			else
 				animation=0;
 			
-			this.setChanged();
-			this.notifyObservers(animation);
+			setChanged();
+			notifyObservers(animation);
 		}
 		else{
-			System.out.println("changed");
-		    this.setChanged();
-			this.notifyObservers(null);
+			animation=0;
+		    setChanged();
+			notifyObservers(animation);
 			stop();
 		}
 		
